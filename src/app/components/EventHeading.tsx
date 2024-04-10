@@ -31,9 +31,6 @@ export default function EventHeading({
 		<>
 			<Link href={`/exhibitions/${show.slug.current}`}>
 				<h2 className="italic">{show.title}</h2>
-				{showName && show?.artists[0]?.name && (
-					<div>{show?.artists[0]?.name}</div>
-				)}
 				<div>
 					<span>{formatDate(show.date_start)}</span>
 					<span>{" → "}</span>

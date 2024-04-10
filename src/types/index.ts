@@ -1,6 +1,6 @@
 import type { Image, Slug } from "@sanity/types";
 export interface ArtistPageProps {
-	name: string;
+	title: string;
 	slug: Slug;
 	image: Image;
 }
