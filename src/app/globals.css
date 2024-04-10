@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
+}
+
+body {
+	color: rgb(var(--foreground-rgb));
+	background: #fff;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 12px;
+
+	@media (min-width: 768px) {
+		font-size: 14px;
+	}
+}
+
+.h-full-svh {
+	height: 100vh;
+	height: 100svh;
+}
+
+.nav-item {
+	line-height: 1;
+	font-size: 1.25rem;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #000;
+		transition: width 0.3s ease;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+
+	&.active::after {
+		width: 100%;
+	}
+
+	a::after {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		line-height: 1;
+		font-size: 1.5rem;
+		&::after {
+			bottom: 0.5;
+		}
+	}
+}
+
+.grid-rows-8 {
+	grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+
+.link,
+button:not(.no-hover) {
+	display: inline-block;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: #000;
+		transition: width 0.3s ease;
+	}
+
+	&:hover::after {
+		width: 100%;
+	}
+
+	&.active::after {
+		width: 100%;
+	}
+}
