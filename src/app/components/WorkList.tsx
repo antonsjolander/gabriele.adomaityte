@@ -30,7 +30,7 @@ export default function WorkList({ work }: { work: ArtistPageProps[] }) {
 					>
 						<Link
 							className="link"
-							href={`/artists/${item.slug.current}`}
+							href={`/work/${item.slug.current}`}
 						>
 							<span>{item.title}</span>
 						</Link>
